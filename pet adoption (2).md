@@ -14,17 +14,17 @@
 ### **1. User Model:**
 
 -  **Fields:**
-   -  **id (Integer):** A distinctive identifier for each user.
+   -  **id (String):** A distinctive identifier for each user.
    -  **name (String):** The name of the user.
    -  **email (String):** The email address of the user.
    -  **password (String):** The hashed password of the user.
-   -  **createdAt (Date):** The timestamp indicates when the user was created.
-   -  **updatedAt (Date):** The timestamp indicates when the user was last updated.
+   -  **createdAt (DateTime):** The timestamp indicates when the user was created.
+   -  **updatedAt (DateTime):** The timestamp indicates when the user was last updated.
 
 ### **2. Pet Model:**
 
 -  **Fields:**
-   -  **id (Integer):** A distinctive identifier for each pet.
+   -  **id (String):** A distinctive identifier for each pet.
    -  **name (String):** The name of the pet.
    -  **species (String):** The species of the pet (e.g., dog, cat).
    -  **breed (String):** The breed of the pet.
@@ -36,19 +36,19 @@
    -  **medicalHistory (String):** The medical history of the pet.
    -  **adoptionRequirements (String):** The requirements for adopting the pet.
    -  **isDeleted (Boolean):** Indicates whether the pet is deleted or not. If set to true, the pet will not be visible.
-   -  **createdAt (Date):** The timestamp indicates when the pet was created.
-   -  **updatedAt (Date):** The timestamp indicates when the pet was last updated.
+   -  **createdAt (DateTime):** The timestamp indicates when the pet was created.
+   -  **updatedAt (DateTime):** The timestamp indicates when the pet was last updated.
 
 ### **3. Adoption Model:**
 
 -  **Fields:**
-   -  **id (Integer):** A distinctive identifier for each adoption application.
-   -  **userId (Integer):** A reference to the user who applied.
-   -  **petId (Integer):** A reference to the pet for which the application is submitted.
+   -  **id (String):** A distinctive identifier for each adoption application.
+   -  **userId (String):** A reference to the user who applied.
+   -  **petId (String):** A reference to the pet for which the application is submitted.
    -  **status (String):** The status of the adoption application (e.g., pending, approved, rejected).
    -  **petOwnershipExperience (String):** The experience of the applicant with pet ownership.
-   -  **createdAt (Date):** The timestamp indicates when the application was created.
-   -  **updatedAt (Date):** The timestamp indicates when the application was last updated.
+   -  **createdAt (DateTime):** The timestamp indicates when the application was created.
+   -  **updatedAt (DateTime):** The timestamp indicates when the application was last updated.
 
 ## **Error Handling:**
 
