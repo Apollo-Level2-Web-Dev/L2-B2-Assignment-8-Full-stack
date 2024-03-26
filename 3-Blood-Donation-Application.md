@@ -34,7 +34,7 @@
     - **hospitalName(String):** The name of the hospital.
     - **hospitalAddress (String):** The address of the hospital.
     - **reason(String)**: The reason for donation.
-    - **requestStatus (String):** The status will be pending by default. **Use enum: `pending`, `approved`, `rejected`.**
+    - **requestStatus (String):** The status will be PENDING by default. **Use enum: `PENDING`, `APPROVED`, `REJECTED`.**
     - **createdAt (Date):** The timestamp indicating when the found item was reported.
     - **updatedAt (Date):** The timestamp indicating when the found item was last updated.
 

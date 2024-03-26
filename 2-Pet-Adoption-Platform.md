@@ -44,7 +44,7 @@
    -  **id (String):** A distinctive identifier for each adoption request.
    -  **userId (String):** A reference to the user who applied.
    -  **petId (String):** A reference to the pet for which the request is submitted.
-   -  **status (String):** The status of the adoption request (e.g., PENDING, APPROVED, REJECTED).
+   -  **status (String):** The status of the adoption request (e.g., PENDING, APPROVED, REJECTED). Default PENDING.
    -  **petOwnershipExperience (String):** The experience of the requester with pet ownership.
    -  **createdAt (DateTime):** The timestamp indicates when the request was created.
    -  **updatedAt (DateTime):** The timestamp indicates when the request was last updated.

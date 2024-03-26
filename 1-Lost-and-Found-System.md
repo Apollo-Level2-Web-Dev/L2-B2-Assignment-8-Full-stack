@@ -35,7 +35,7 @@
     - **id (String):** A distinctive identifier for each found item.
     - **userId (String):** A reference to the user who found the item.
     - **categoryId (String):** A reference to the category of the found item.
-    - foundItemName (String): Name of the found item, ex: **iPhone 15 pro**
+    - **foundItemName (String):** Name of the found item, ex: **iPhone 15 pro**
     - **description (String):** A description of the found item.
     - **location (String):** The location where the item was found.
     - **createdAt (Date):** The timestamp indicating when the found item was reported.
@@ -47,9 +47,9 @@
     - **id (String):** A distinctive identifier for each claim.
     - **userId (String):** A reference to the user who claims the found item.
     - **foundItemId (String):** A reference to the found item being claimed.
-    - **status (String):** The status of the claim (e.g., PENDING, APPROVED, REJECTED) default will be “**pending”** while creating a claim.
-    - distinguishingFeatures (String): Any distinguishing features provided by the user regarding the claimed item, which can be used to identify the claimant as the owner.
-    - lostDate (Date): The timestamp indicating when the item was lost.
+    - **status (String):** The status of the claim (e.g., PENDING, APPROVED, REJECTED) default will be **PENDING** while creating a claim.
+    - **distinguishingFeatures (String):** Any distinguishing features provided by the user regarding the claimed item, which can be used to identify the claimant as the owner.
+    - **lostDate (Date):** The timestamp indicating when the item was lost.
     - **createdAt (Date):** The timestamp indicating when the claim was made.
     - **updatedAt (Date):** The timestamp indicating when the claim was last updated.
 
