@@ -102,9 +102,22 @@ Implement proper error handling throughout the application. Use global error han
 
 ```
 
+- Unauthorized Error Response
+
+If an unauthorized access attempt is detected, the system will respond with the following error message:
+
+```json
+{
+    "success": false,
+    "message": "error mesage",
+    "errorDetails": unauthorized error
+}
+```
+
 ## **Endpoints:**
 
 ### **1. User Registration**
+This endpoint handles user registration, creating both the user account and corresponding user profile simultaneously using a transactional approach.
 
 - **Endpoint:** **`POST /api/register`**
 - **Request Body:**
@@ -147,7 +160,6 @@ Implement proper error handling throughout the application. Use global error han
 ```
 
 ### **2. User Login**
-
 - **Endpoint:** **`POST /api/login`**
 - **Request Body:**
 
@@ -206,7 +218,7 @@ Implement proper error handling throughout the application. Use global error han
 This endpoint allows authenticated users to create a new category for found items.
 
 ### **4. Report a Found Item**
-
+Creates a Found Item using the user's details extracted from the authorization token.
 - **Endpoint:** **`POST /api/found-items`**
 - **Request Headers:**
     - `Authorization: <JWT_TOKEN>`
@@ -230,7 +242,7 @@ This endpoint allows authenticated users to create a new category for found item
     "message": "Found item reported successfully",
     "data": {
         "id": "b9964127-2924-42bb-9970-60f93c0162lm",
-        "userId": "b9964127-2924-42bb-9970-60f93c016bvf",
+        "userId": "b9964127-2924-42bb-9970-60f93c016bvf", 
         "user": {
             "id": "b9964127-2924-42bb-9970-60f93c016bvf",
             "name": "John Doe",
@@ -330,6 +342,7 @@ When interacting with the API, you can utilize the following query parameters to
 ```
 
 ### **6. Create a Claim**
+Creates a Clain using the user's details extracted from the authorization token.
 
 - **Endpoint:** **`POST /api/claims`**
 - **Request Headers:**
@@ -399,7 +412,7 @@ Retrieve claims made by the authenticated user for their found items.
                 "createdAt": "2024-03-25T08:00:00Z",
                 "updatedAt": "2024-03-25T08:00:00Z",
                 "user": {
-                    "id": "b9964127-2924-42bb-9970-60f93c016bvf",
+                    "id": "b9964127-2924-42bb-9970-60f93c016bvf", // same as id (userId) of decoded token (JWT token)
                     "name": "John Doe",
                     "email": "john@example.com",
                     "createdAt": "2024-03-23T12:00:00Z",
