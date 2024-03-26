@@ -89,12 +89,13 @@ Implement proper error handling throughout the application. Use global error han
 ```
 
 - For General or Generic Errors
-
-[{
+```json
+{
     "success": false,
     "message": "error mesage",
     "errorDetails": error
-}](https://www.notion.so/success-false-message-error-mesage-errorDetails-error-577d5cd233864c32afdc23b5741f1737?pvs=21)
+}
+```
 
 - Unauthorized Error Response
 

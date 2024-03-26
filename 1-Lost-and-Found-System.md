@@ -47,7 +47,7 @@
     - **id (String):** A distinctive identifier for each claim.
     - **userId (String):** A reference to the user who claims the found item.
     - **foundItemId (String):** A reference to the found item being claimed.
-    - **status (String):** The status of the claim (e.g., pending, approved, rejected) default will be “**pending”** while creating a claim.
+    - **status (String):** The status of the claim (e.g., PENDING, APPROVED, REJECTED) default will be “**pending”** while creating a claim.
     - distinguishingFeatures (String): Any distinguishing features provided by the user regarding the claimed item, which can be used to identify the claimant as the owner.
     - lostDate (Date): The timestamp indicating when the item was lost.
     - **createdAt (Date):** The timestamp indicating when the claim was made.
@@ -444,7 +444,7 @@ Update the status of a claim made for a found item. Only the person who reported
 ```json
 
 {
-    "status": "approved"
+    "status": "APPROVED"
 }
 ```
 
@@ -461,7 +461,7 @@ Update the status of a claim made for a found item. Only the person who reported
         "foundItemId": "9b0dadf5-10fd-41d1-8345-80e67c85727c",
         "distinguishingFeatures": "My phone has a dent in the back",
         "lostDate": "2024-03-23T12:00:00Z",
-        "status": "approved",
+        "status": "APPROVED",
         "createdAt": "2024-03-23T12:05:00Z",
         "updatedAt": "2024-03-23T12:05:00Z"
     }
