@@ -399,8 +399,6 @@ Creates a Clain using the user's details extracted from the authorization token.
 
 ### **7. Get Claims**
 
-Retrieve claims made by the authenticated user for their found items.
-
 - **Endpoint:** **`GET /api/claims`**
 - **Request Headers:**
     - `Authorization: <JWT_TOKEN>`
@@ -432,7 +430,7 @@ Retrieve claims made by the authenticated user for their found items.
                 "createdAt": "2024-03-25T08:00:00Z",
                 "updatedAt": "2024-03-25T08:00:00Z",
                 "user": {
-                    "id": "b9964127-2924-42bb-9970-60f93c016bvf", // same as id (userId) of decoded token (JWT token)
+                    "id": "b9964127-2924-42bb-9970-60f93c016bvf", 
                     "name": "John Doe",
                     "email": "john@example.com",
                     "createdAt": "2024-03-23T12:00:00Z",
@@ -453,10 +451,7 @@ Retrieve claims made by the authenticated user for their found items.
 
 ### **8. Update Claim Status**
 
-Update the status of a claim made for a found item. Only the person who reported the found item can update the claim status.
-
 - **Endpoint:** **`PUT /api/claims/:claimId`**
-- Only the the person who post the found item can update the claim status for that item
 - **Request Headers:**
     - `Authorization: <JWT_TOKEN>`
 - **Request Body:**
