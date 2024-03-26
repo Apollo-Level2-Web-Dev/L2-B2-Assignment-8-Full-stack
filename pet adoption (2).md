@@ -6,7 +6,7 @@
 
 -  **Programming Language:** TypeScript
 -  **Web Framework:** Express.js
--  **Object Relational Mapping (ORM):** Prisma for PostgreSQL
+-  **Object Relational Mapping (ORM):** Prisma with PostgreSQL
 -  **Authentication:** JWT (JSON Web Tokens)
 
 ## **Models:**
@@ -35,20 +35,19 @@
    -  **temperament (String):** The temperament of the pet.
    -  **medicalHistory (String):** The medical history of the pet.
    -  **adoptionRequirements (String):** The requirements for adopting the pet.
-   -  **isDeleted (Boolean):** Indicates whether the pet is deleted or not. If set to true, the pet will not be visible.
    -  **createdAt (DateTime):** The timestamp indicates when the pet was created.
    -  **updatedAt (DateTime):** The timestamp indicates when the pet was last updated.
 
-### **3. Adoption Model:**
+### **3. Adoption Request Model:**
 
 -  **Fields:**
-   -  **id (String):** A distinctive identifier for each adoption application.
+   -  **id (String):** A distinctive identifier for each adoption request.
    -  **userId (String):** A reference to the user who applied.
-   -  **petId (String):** A reference to the pet for which the application is submitted.
-   -  **status (String):** The status of the adoption application (e.g., pending, approved, rejected).
-   -  **petOwnershipExperience (String):** The experience of the applicant with pet ownership.
-   -  **createdAt (DateTime):** The timestamp indicates when the application was created.
-   -  **updatedAt (DateTime):** The timestamp indicates when the application was last updated.
+   -  **petId (String):** A reference to the pet for which the request is submitted.
+   -  **status (String):** The status of the adoption request (e.g., pending, approved, rejected).
+   -  **petOwnershipExperience (String):** The experience of the requester with pet ownership.
+   -  **createdAt (DateTime):** The timestamp indicates when the request was created.
+   -  **updatedAt (DateTime):** The timestamp indicates when the request was last updated.
 
 ## **Error Handling:**
 
@@ -227,6 +226,11 @@ When interacting with the API, you can utilize the following query parameters to
 -  `age`: (Optional) Filter pets by age.
 -  `size`: (Optional) Filter pets by size.
 -  `location`: (Optional) Filter pets by location.
+-  `searchTerm`: (Optional) Searches for items based on a keyword or phrase. Only applicable to the following fields: `species`, `breed`, `location`, etc.
+-  `page`: (Optional) Specifies the page number for paginated results. Default is 1. Example: ?page=2
+-  `limit`: (Optional) Sets the number of items per page. Default is 10. Example: ?limit=5
+-  `sortBy`: (Optional) Specifies the field by which the results should be sorted. Only applicable to the following fields: `species`, `breed`, `size`. Example: ?sortBy=cat
+-  `sortOrder`: (Optional) Determines the sorting order, either 'asc' (ascending) or 'desc' (descending). Example: ?sortOrder=desc
 -  **Response:**
 
 ```json
@@ -297,7 +301,7 @@ This endpoint allows users with appropriate permissions to update the profile of
 
 ### 6. Submit Adoption Request
 
--  **Endpoint:** **`POST /api/adoption-applications`**
+-  **Endpoint:** **`POST /api/adoption-request`**
 -  **Request Headers:**
    -  `Authorization: <JWT_TOKEN>`
 -  **Request Body:**
@@ -315,24 +319,22 @@ This endpoint allows users with appropriate permissions to update the profile of
 {
    "success": true,
    "statusCode": 201,
-   "message": "Adoption application submitted successfully",
+   "message": "Adoption request submitted successfully",
    "data": {
       "id": "9b0dadf5-10fd-41d1-8355-80e67c85727c",
       "userId": "b9964127-2924-42bb-9970-60f93c016bvf",
       "petId": "b9964127-2924-42bb-9970-60f93c016ghs",
       "status": "pending",
-      "livingSituation": "House with fenced yard",
       "petOwnershipExperience": "Previous owner of a Labrador Retriever",
-      "references": "Dr. Smith (veterinarian)",
       "createdAt": "2024-03-24T12:00:00Z",
       "updatedAt": "2024-03-24T12:00:00Z"
    }
 }
 ```
 
-### 7. Get Adoption Applications
+### 7. Get Adoption Requests
 
--  **Endpoint:** **`GET /api/adoption-applications`**
+-  **Endpoint:** **`GET /api/adoption-requests`**
 -  **Request Headers:**
    -  `Authorization: <JWT_TOKEN>`
 -  **Response:**
@@ -341,7 +343,7 @@ This endpoint allows users with appropriate permissions to update the profile of
 {
    "success": true,
    "statusCode": 200,
-   "message": "Adoption applications retrieved successfully",
+   "message": "Adoption requests retrieved successfully",
    "data": [
       {
          "id": "9b0dadf5-10fd-41d1-8355-80e67c85727c",
@@ -354,14 +356,14 @@ This endpoint allows users with appropriate permissions to update the profile of
          "createdAt": "2024-03-24T12:00:00Z",
          "updatedAt": "2024-03-24T12:00:00Z"
       }
-      // More adoption applications
+      // More adoption requests
    ]
 }
 ```
 
-### 8. Update Adoption Application Status
+### 8. Update Adoption Request Status
 
--  **Endpoint:** **`PUT /api/adoption-applications/:applicationId`**
+-  **Endpoint:** **`PUT /api/adoption-requests/:requestId`**
 -  **Request Headers:**
    -  `Authorization: <JWT_TOKEN>`
 -  **Request Body:**
@@ -378,7 +380,7 @@ This endpoint allows users with appropriate permissions to update the profile of
 {
    "success": true,
    "statusCode": 200,
-   "message": "Adoption application updated successfully",
+   "message": "Adoption request updated successfully",
    "data": {
       "id": "9b0dadf5-10fd-41d1-8355-80e67c85727c",
       "userId": "b9964127-2924-42bb-9970-60f93c016bvf",
