@@ -49,6 +49,18 @@
    -  **createdAt (DateTime):** The timestamp indicates when the request was created.
    -  **updatedAt (DateTime):** The timestamp indicates when the request was last updated.
 
+### Relational Description
+1. **User Model:**
+   - One-to-Many relationship with Adoption Request (each user can make multiple adoption requests).
+
+2. **Pet Model:**
+   - One-to-Many relationship with Adoption Request (each pet can have multiple adoption requests).
+
+3. **Adoption Request Model:**
+   - Many-to-One relationship with User (each adoption request belongs to one user).
+   - Many-to-One relationship with Pet (each adoption request is for one pet).
+
+
 ## **Error Handling:**
 
 Implement proper error handling throughout the application. Use global error handling middleware to catch and handle errors, providing appropriate error responses with status codes and error messages.
