@@ -446,10 +446,10 @@ This endpoint allows users with appropriate permissions to update the profile of
     "message": "User profile updated successfully",
     "data": {
         "id": "9b0dadf5-10fd-41d1-8355-80e67c85727c",
-        "userId":"9b0dadf5-10fd-41d1-8355-80e67c8577y"
-        "bio ":"My Bio",
+        "userId":"9b0dadf5-10fd-41d1-8355-80e67c8577y",
+        "bio":"My Bio",
         "profession ": "john@example.com",
-        "address":"Permanent address"
+        "address":"Permanent address",
         "createdAt": "2024-03-24T12:00:00Z",
         "updatedAt": "2024-03-24T12:00:00Z"
     }
