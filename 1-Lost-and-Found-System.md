@@ -63,6 +63,26 @@
     - **createdAt (Date):** The timestamp indicating when the user profile was created.
     - **updatedAt (Date):** The timestamp indicating when the user profile was last updated.
 
+### Relational Description 
+1. **User Model:**
+   - One-to-Many with FoundItem.
+   - One-to-Many with Claim.
+   - One-to-One with UserProfile.
+
+2. **FoundItemCategory Model:**
+   - Indirectly related to FoundItem.
+
+3. **FoundItem Model:**
+   - Belongs to one User.
+   - Belongs to one FoundItemCategory.
+
+4. **Claim Model:**
+   - Belongs to one User.
+   - Belongs to one FoundItem.
+
+5. **UserProfile Model:**
+   - Belongs to one User.
+
 ## **Error Handling:**
 
 Implement proper error handling throughout the application. Use global error handling middleware to catch and handle errors, providing appropriate error responses with status codes and error messages.
