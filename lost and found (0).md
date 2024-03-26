@@ -170,29 +170,25 @@ Implement proper error handling throughout the application. Use global error han
 -  **Request Body:**
 
 ```json
-jsonCopy code
 {
-    "name": "Electronics"
+   "name": "Electronics"
 }
-
 ```
 
 -  **Response:**
 
 ```json
-jsonCopy code
 {
-    "success": true,
-    "statusCode": 201,
-    "message": "Found item category created successfully",
-    "data": {
-        "id": "9deaf54e-3f4f-4b50-9902-6c272f73db4a",
-        "name": "Electronics",
-        "createdAt": "2024-03-26T12:00:00Z",
-        "updatedAt": "2024-03-26T12:00:00Z"
-    }
+   "success": true,
+   "statusCode": 201,
+   "message": "Found item category created successfully",
+   "data": {
+      "id": "9deaf54e-3f4f-4b50-9902-6c272f73db4a",
+      "name": "Electronics",
+      "createdAt": "2024-03-26T12:00:00Z",
+      "updatedAt": "2024-03-26T12:00:00Z"
+   }
 }
-
 ```
 
 This endpoint allows authenticated users to create a new category for found items.
@@ -292,23 +288,21 @@ When interacting with the API, you can utilize the following query parameters to
 -  **Response:**
 
 ```json
-jsonCopy code
 {
-    "success": true,
-    "statusCode": 201,
-    "message": "Claim created successfully",
-    "data": {
-        "id": "9b0dadf5-10fd-41d1-8355-80e67c85727c",
-        "userId": "9b0dadf5-10fd-41d1-8355-80e67c85727t",
-        "foundItemId": "9b0dadf5-10fd-41d1-8345-80e67c85727c",
-        "distinguishingFeatures": "My phone has a dent in the back",
-        "lostDate": "2024-03-23T12:00:00Z",
-        "status": "pending",
-        "createdAt": "2024-03-23T12:05:00Z",
-        "updatedAt": "2024-03-23T12:05:00Z"
-    }
+   "success": true,
+   "statusCode": 201,
+   "message": "Claim created successfully",
+   "data": {
+      "id": "9b0dadf5-10fd-41d1-8355-80e67c85727c",
+      "userId": "9b0dadf5-10fd-41d1-8355-80e67c85727t",
+      "foundItemId": "9b0dadf5-10fd-41d1-8345-80e67c85727c",
+      "distinguishingFeatures": "My phone has a dent in the back",
+      "lostDate": "2024-03-23T12:00:00Z",
+      "status": "pending",
+      "createdAt": "2024-03-23T12:05:00Z",
+      "updatedAt": "2024-03-23T12:05:00Z"
+   }
 }
-
 ```
 
 ### **7. Get Claims**
@@ -319,26 +313,24 @@ jsonCopy code
 -  **Response:**
 
 ```json
-jsonCopy code
 {
-    "success": true,
-    "statusCode": 200,
-    "message": "Claims retrieved successfully",
-    "data": [
-        {
-            "id": "9b0dadf5-10fd-41d1-8355-80e67c85727c",
-            "userId": "9b0dadf5-10fd-41d1-8355-80e67c85727t",
-            "foundItemId": "9b0dadf5-10fd-41d1-8345-80e67c85727c",
-            "distinguishingFeatures": "My phone has a dent in the back",
-            "lostDate": "2024-03-23T12:00:00Z",
-            "status": "pending",
-            "createdAt": "2024-03-23T12:05:00Z",
-            "updatedAt": "2024-03-23T12:05:00Z"
-        },
-        // More claims
-    ]
+   "success": true,
+   "statusCode": 200,
+   "message": "Claims retrieved successfully",
+   "data": [
+      {
+         "id": "9b0dadf5-10fd-41d1-8355-80e67c85727c",
+         "userId": "9b0dadf5-10fd-41d1-8355-80e67c85727t",
+         "foundItemId": "9b0dadf5-10fd-41d1-8345-80e67c85727c",
+         "distinguishingFeatures": "My phone has a dent in the back",
+         "lostDate": "2024-03-23T12:00:00Z",
+         "status": "pending",
+         "createdAt": "2024-03-23T12:05:00Z",
+         "updatedAt": "2024-03-23T12:05:00Z"
+      }
+      // More claims
+   ]
 }
-
 ```
 
 ### **8. Update Claim Status**
@@ -358,23 +350,21 @@ jsonCopy code
 -  **Response:**
 
 ```json
-jsonCopy code
 {
-    "success": true,
-    "statusCode": 200,
-    "message": "Claim updated successfully",
-    "data": {
-            "id": "9b0dadf5-10fd-41d1-8355-80e67c85727c",
-            "userId": "9b0dadf5-10fd-41d1-8355-80e67c85727t",
-            "foundItemId": "9b0dadf5-10fd-41d1-8345-80e67c85727c",
-            "distinguishingFeatures": "My phone has a dent in the back",
-            "lostDate": "2024-03-23T12:00:00Z",
-            "status": "approved",
-            "createdAt": "2024-03-23T12:05:00Z",
-            "updatedAt": "2024-03-23T12:05:00Z"
-        },
+   "success": true,
+   "statusCode": 200,
+   "message": "Claim updated successfully",
+   "data": {
+      "id": "9b0dadf5-10fd-41d1-8355-80e67c85727c",
+      "userId": "9b0dadf5-10fd-41d1-8355-80e67c85727t",
+      "foundItemId": "9b0dadf5-10fd-41d1-8345-80e67c85727c",
+      "distinguishingFeatures": "My phone has a dent in the back",
+      "lostDate": "2024-03-23T12:00:00Z",
+      "status": "approved",
+      "createdAt": "2024-03-23T12:05:00Z",
+      "updatedAt": "2024-03-23T12:05:00Z"
+   }
 }
-
 ```
 
 ### **9. Get Profile**
