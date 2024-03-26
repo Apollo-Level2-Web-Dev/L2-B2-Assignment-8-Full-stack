@@ -238,6 +238,11 @@ When interacting with the API, you can utilize the following query parameters to
    "success": true,
    "statusCode": 200,
    "message": "Pets retrieved successfully",
+   "meta": { // only for paginated result
+      "page": 1,
+      "limit": 10,
+      "total: 20
+   },
    "data": [
       {
          "id": "b9964127-2924-42bb-9970-60f93c016ghs",
