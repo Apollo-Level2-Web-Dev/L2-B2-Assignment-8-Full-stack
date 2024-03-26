@@ -44,7 +44,7 @@
    -  **id (String):** A distinctive identifier for each adoption request.
    -  **userId (String):** A reference to the user who applied.
    -  **petId (String):** A reference to the pet for which the request is submitted.
-   -  **status (String):** The status of the adoption request (e.g., pending, approved, rejected).
+   -  **status (String):** The status of the adoption request (e.g., PENDING, APPROVED, REJECTED).
    -  **petOwnershipExperience (String):** The experience of the requester with pet ownership.
    -  **createdAt (DateTime):** The timestamp indicates when the request was created.
    -  **updatedAt (DateTime):** The timestamp indicates when the request was last updated.
@@ -324,7 +324,7 @@ This endpoint allows users with appropriate permissions to update the profile of
       "id": "9b0dadf5-10fd-41d1-8355-80e67c85727c",
       "userId": "b9964127-2924-42bb-9970-60f93c016bvf",
       "petId": "b9964127-2924-42bb-9970-60f93c016ghs",
-      "status": "pending",
+      "status": "PENDING",
       "petOwnershipExperience": "Previous owner of a Labrador Retriever",
       "createdAt": "2024-03-24T12:00:00Z",
       "updatedAt": "2024-03-24T12:00:00Z"
@@ -349,7 +349,7 @@ This endpoint allows users with appropriate permissions to update the profile of
          "id": "9b0dadf5-10fd-41d1-8355-80e67c85727c",
          "userId": "b9964127-2924-42bb-9970-60f93c016bvf",
          "petId": "b9964127-2924-42bb-9970-60f93c016ghs",
-         "status": "pending",
+         "status": "PENDING",
          "livingSituation": "House with fenced yard",
          "petOwnershipExperience": "Previous owner of a Labrador Retriever",
          "references": "Dr. Smith (veterinarian)",
@@ -370,7 +370,7 @@ This endpoint allows users with appropriate permissions to update the profile of
 
 ```json
 {
-   "status": "approved"
+   "status": "APPROVED"
 }
 ```
 
@@ -385,7 +385,7 @@ This endpoint allows users with appropriate permissions to update the profile of
       "id": "9b0dadf5-10fd-41d1-8355-80e67c85727c",
       "userId": "b9964127-2924-42bb-9970-60f93c016bvf",
       "petId": "b9964127-2924-42bb-9970-60f93c016ghs",
-      "status": "approved",
+      "status": "APPROVED",
       "livingSituation": "House with fenced yard",
       "petOwnershipExperience": "Previous owner of a Labrador Retriever",
       "references": "Dr. Smith (veterinarian)",
