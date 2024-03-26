@@ -81,7 +81,7 @@ Implement proper error handling throughout the application. Use global error han
 ```json
 {
     "success": false,
-    "message": "error mesage",
+    "message": "Something Went Wrong",
     "errorDetails": error
 }
 ```
@@ -98,13 +98,7 @@ If an unauthorized access attempt is detected, the system will respond with the 
 }
 ```
 
-This error may occur under the following circumstances:
-
--  **JWT Expiry:** The provided JWT (JSON Web Token) has expired.
--  **Invalid JWT:** The JWT provided is invalid or malformed.
--  **Undefined JWT:** No JWT is provided in the request headers.
--  **Not Authorized User:** The user does not possess the required permissions for the requested action or resource.
--  **Access Denied:** The user is attempting to access a resource without the necessary authorization.
+Error Scenarios: `JWT Expiry`, `Invalid JWT`, `Undefined JWT`, `Not Authorized User`, `Access Denied`, etc.
 
 ## **Endpoints:**
 
