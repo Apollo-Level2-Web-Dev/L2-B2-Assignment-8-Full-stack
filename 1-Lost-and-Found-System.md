@@ -121,7 +121,7 @@ Implement proper error handling throughout the application. Use global error han
  }
 ```
 
-- **Response: (**Response should not include the password)
+- **Response:** (Response should not include the password)
 
 ```json
 {
@@ -515,15 +515,15 @@ Update the status of a claim made for a found item. Only the person who reported
         "userId": "b9964127-2924-42bb-9970-60f93c016b3f",
         "bio": "Updated bio text",
         "age": 35,
+        "createdAt": "2024-03-23T12:00:00Z",
+        "updatedAt": "2024-03-24T10:00:00Z",
         "user": {
             "id": "b9964127-2924-42bb-9970-60f93c016b3f",
             "name": "John Doe",
             "email": "john@example.com",
             "createdAt": "2024-03-23T12:00:00Z",
             "updatedAt": "2024-03-23T12:00:00Z"
-        },
-        "createdAt": "2024-03-23T12:00:00Z",
-        "updatedAt": "2024-03-24T10:00:00Z"
+        }
     }
 }
 ```
