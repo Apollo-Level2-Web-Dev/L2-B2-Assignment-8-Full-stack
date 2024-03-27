@@ -25,9 +25,9 @@
 
 ## **Deadline:**
 
--  60 marks: February 19, 2024 11.59 AM
--  50 marks: February 20, 2024 11.59 PM
--  30 marks: After February 20, 2024
+-  60 marks: March  30, 2024 11.59 AM
+-  50 marks: March 31, 2024 11.59 PM
+-  30 marks: After March 31 , 2024
 
 ## Important Note:
 
