@@ -129,7 +129,7 @@ This error may occur under the following circumstances:
   "email": "johndoe@example.com",
   "password": "securepassword",
   "bio":"My Bio",
-  "profession":"Developer"
+  "profession":"Developer",
   "address":"Permanent Address"
 }
 ```
