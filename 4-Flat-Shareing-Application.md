@@ -18,8 +18,8 @@
     - **name (String):** The name of the user.
     - **email (String):** The email address of the user.
     - **password (String):** The hashed password of the user.
-    - **createdAt (Date):** The timestamp indicates when the user was created.
-    - **updatedAt (Date):** The timestamp indicates when the user was last updated.
+    - **createdAt (DateTime):** The timestamp indicates when the user was created.
+    - **updatedAt (DateTime):** The timestamp indicates when the user was last updated.
 
 ### **2. Flat Model:**
 
@@ -34,8 +34,8 @@
     - **rent(Integer):** Rent Amount.
     - **availability(Boolean):** whether it is available now or not.
     - **advanceAmount(Integer):** Advance amount.
-    - **createdAt (Date):** The timestamp indicates when flat was created.
-    - **updatedAt (Date):** The timestamp indicates when the flat was last updated.
+    - **createdAt (DateTime):** The timestamp indicates when flat was created.
+    - **updatedAt (DateTime):** The timestamp indicates when the flat was last updated.
 
 ### **3. Booking Model:**
 
@@ -44,8 +44,8 @@
     - **flatId (String): reference Id from flat model**.
     - **userId (String): reference Id from user model**.
     - **status (String):** is it available or not ref from availability of flat model  (e.g.  PENDING, BOOKED, REJECTED).By default it will be PENDING
-    - **createdAt (Date):** The timestamp indicates when the application was created.
-    - **updatedAt (Date):** The timestamp indicates when the application was last updated.
+    - **createdAt (DateTime):** The timestamp indicates when the application was created.
+    - **updatedAt (DateTime):** The timestamp indicates when the application was last updated.
     
 - **UserProfile Model:**
     - **id (String):** A distinctive identifier for each user profile.
@@ -53,8 +53,8 @@
     - **bio (String):** A brief bio or description of the user.
     - **profession (String):** Profession of the user.
     - **address (String):** Permanent address of the user
-    - **createdAt (Date):** The timestamp indicating when the user profile was created.
-    - **updatedAt (Date):** The timestamp indicating when the user profile was last updated.
+    - **createdAt (DateTime):** The timestamp indicating when the user profile was created.
+    - **updatedAt (DateTime):** The timestamp indicating when the user profile was last updated.
 
 ## **Error Handling:**
 
@@ -216,7 +216,7 @@ This error may occur under the following circumstances:
         "description": "Cozy apartment with ample natural light and modern amenities.",
         "rent": 1500,
         "availability": true,
-        "advanceAmount": 2000
+        "advanceAmount": 2000,
         "createdAt": "2024-03-24T12:00:00Z",
         "updatedAt": "2024-03-24T12:00:00Z"
     }
