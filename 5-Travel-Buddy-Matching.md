@@ -277,7 +277,7 @@ When interacting with the API, you can utilize the following query parameters to
 }
 ```
 
-### **6. Send Travel Buddy Request**
+### **5. Send Travel Buddy Request**
 
 - **Endpoint:** **`POST /api/trip/:tripId/request`**
 - **Request Headers:**
@@ -308,7 +308,7 @@ When interacting with the API, you can utilize the following query parameters to
 }
 ```
 
-### **7. Get Potential Travel Buddies For a Specific Trip**
+### **6. Get Potential Travel Buddies For a Specific Trip**
 
 - **Endpoint:** **`GET /api/travel-buddies/:tripId`**
 - **Request Headers:**
@@ -339,7 +339,7 @@ When interacting with the API, you can utilize the following query parameters to
 }
 ```
 
-### **8. Respond to Travel Buddy Request**
+### **7. Respond to Travel Buddy Request**
 
 - **Endpoint:** **`PUT /api/travel-buddies/:buddyId/respond`**
 - **Request Headers:**
@@ -370,7 +370,7 @@ When interacting with the API, you can utilize the following query parameters to
 }
 ```
 
-### **9. Get User Profile**
+### **8. Get User Profile**
 
 - **Endpoint:** **`GET /api/profile`**
 - **Request Headers:**
@@ -392,7 +392,7 @@ When interacting with the API, you can utilize the following query parameters to
 }
 ```
 
-### **10. Update User Profile**
+### **9. Update User Profile**
 
 - **Endpoint:** **`PUT /api/profile`**
 - **Request Headers:**
