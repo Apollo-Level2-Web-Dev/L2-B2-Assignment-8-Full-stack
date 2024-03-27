@@ -114,6 +114,10 @@ Error Scenarios: `JWT Expiry`, `Invalid JWT`, `Undefined JWT`, `Not Authorized U
 
 ## **Endpoints:**
 
+**N.B.** For now, no role is required, allowing anyone to perform any operation without restrictions.
+
+**`POST /api/register:`  The request method like GET, PUT, PATCH, DELETE, POST should not be included in the route path. Follow the pattern as shown in the example for every endpoint: `"/api/register"`**
+
 ### **1. User Registration**
 
 -  **Endpoint:** **`POST /api/register`**

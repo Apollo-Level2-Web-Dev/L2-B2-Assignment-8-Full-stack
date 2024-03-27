@@ -119,6 +119,10 @@ This error may occur under the following circumstances:
 
 ## **Endpoints:**
 
+**N.B.** For now, no role is required, allowing anyone to perform any operation without restrictions.
+
+**`POST /api/register:`  The request method like GET, PUT, PATCH, DELETE, POST should not be included in the route path. Follow the pattern as shown in the example for every endpoint: `"/api/register"`**
+
 ### **1. User Registration**
 
 This endpoint handles user registration, creating both the user account and corresponding user profile simultaneously using a transactional approach.
