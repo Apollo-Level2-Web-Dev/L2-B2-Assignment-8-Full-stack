@@ -56,6 +56,21 @@
     - **createdAt (DateTime):** The timestamp indicating when the user profile was created.
     - **updatedAt (DateTime):** The timestamp indicating when the user profile was last updated.
 
+## Relational Description
+1. **User Model:**
+   - One-to-One relationship with UserProfile (each user has one profile).
+   - One-to-Many relationship with Booking (each user can make multiple bookings).
+
+2. **Flat Model:**
+   - One-to-Many relationship with Booking (each flat can have multiple bookings).
+
+3. **Booking Model:**
+   - Many-to-One relationship with User (each booking belongs to one user).
+   - Many-to-One relationship with Flat (each booking is for one flat).
+
+4. **UserProfile Model:**
+   - One-to-One relationship with User (each profile belongs to one user).
+
 ## **Error Handling:**
 
 Implement proper error handling throughout the application. Use global error handling middleware to catch and handle errors, providing appropriate error responses with status codes and error messages.
