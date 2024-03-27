@@ -413,7 +413,7 @@ This endpoint allows users with appropriate permissions to update the profile of
 }
 ```
 
-### 9. Get User Profile
+### 9. Get User Information
 
 -  **Endpoint:** **`GET /api/profile`**
 -  **Request Headers:**
@@ -435,7 +435,7 @@ This endpoint allows users with appropriate permissions to update the profile of
 }
 ```
 
-### 10. Update User Profile
+### 10. Update User Information
 
 -  **Endpoint:** **`PUT /api/profile`**
 -  **Request Headers:**
