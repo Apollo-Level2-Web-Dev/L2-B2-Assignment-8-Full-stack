@@ -54,6 +54,24 @@
     - **createdAt (Date):** The timestamp indicating when the user profile was created.
     - **updatedAt (Date):** The timestamp indicating when the user profile was last updated.
 
+## Relational Description: 
+
+1. **User Model:**
+   - One-to-One relationship with UserProfile (each user has one profile).
+   - One-to-Many relationship with Trip (each user can create multiple trips).
+   - One-to-Many relationship with Travel Buddy Request (each user can send or receive multiple buddy requests).
+
+2. **Trip Model:**
+   - Many-to-One relationship with User (each trip belongs to one user).
+   - One-to-Many relationship with Travel Buddy Request (each trip can have multiple buddy requests).
+
+3. **Travel Buddy Request Model:**
+   - Many-to-One relationship with User (each request belongs to one user).
+   - Many-to-One relationship with Trip (each request belongs to one trip).
+
+4. **UserProfile Model:**
+   - One-to-One relationship with User (each profile belongs to one user).
+
 ## **Error Handling:**
 
 Implement proper error handling throughout the application. Use global error handling middleware to catch and handle errors, providing appropriate error responses with status codes and error messages.
