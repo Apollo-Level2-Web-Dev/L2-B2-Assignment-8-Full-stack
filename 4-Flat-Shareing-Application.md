@@ -338,9 +338,10 @@ This endpoint allows users with appropriate permissions to update the profile of
         "id": "9b0dadf5-10fd-41d1-8355-80e67c85727c",
         "userId": "b9964127-2924-42bb-9970-60f93c016bvf",
         "flatId": "b9964127-2924-42bb-9970-60f93c016ghs",
-        "status":"PENDING"
+        "status":"PENDING",
         "createdAt": "2024-03-24T12:00:00Z",
         "updatedAt": "2024-03-24T12:00:00Z" 
+    }
 }
 ```
 
