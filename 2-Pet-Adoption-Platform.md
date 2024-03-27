@@ -50,16 +50,18 @@
    -  **updatedAt (DateTime):** The timestamp indicates when the request was last updated.
 
 ### Relational Description
+
 1. **User Model:**
-   - One-to-Many relationship with Adoption Request (each user can make multiple adoption requests).
+
+   -  One-to-Many relationship with Adoption Request (each user can make multiple adoption requests).
 
 2. **Pet Model:**
-   - One-to-Many relationship with Adoption Request (each pet can have multiple adoption requests).
+
+   -  One-to-Many relationship with Adoption Request (each pet can have multiple adoption requests).
 
 3. **Adoption Request Model:**
-   - Many-to-One relationship with User (each adoption request belongs to one user).
-   - Many-to-One relationship with Pet (each adoption request is for one pet).
-
+   -  Many-to-One relationship with User (each adoption request belongs to one user).
+   -  Many-to-One relationship with Pet (each adoption request is for one pet).
 
 ## **Error Handling:**
 
@@ -116,7 +118,7 @@ Error Scenarios: `JWT Expiry`, `Invalid JWT`, `Undefined JWT`, `Not Authorized U
 
 **N.B.** For now, no role is required, allowing anyone to perform any operation without restrictions.
 
-**`POST /api/register:`  The request method like GET, PUT, PATCH, DELETE, POST should not be included in the route path. Follow the pattern as shown in the example for every endpoint: `"/api/register"`**
+**`POST /api/register:` The request method like GET, PUT, PATCH, DELETE, POST should not be included in the route path. Follow the pattern as shown in the example for every endpoint: `"/api/register"`**
 
 ### **1. User Registration**
 
@@ -248,10 +250,11 @@ When interacting with the API, you can utilize the following query parameters to
    "success": true,
    "statusCode": 200,
    "message": "Pets retrieved successfully",
-   "meta": { // only for paginated result
+   "meta": {
+      // only for paginated result
       "page": 1,
       "limit": 10,
-      "total: 20
+      "total": 20
    },
    "data": [
       {
