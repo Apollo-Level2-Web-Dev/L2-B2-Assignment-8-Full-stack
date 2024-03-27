@@ -243,7 +243,7 @@ When interacting with the API, you can utilize the following query parameters to
                 "userId": "b9964127-2924-42bb-9970-60f93c016ghi",
                 "bio": "I have donated 5 times.",
                 "age": 30,
-                "lastDonationDate": "2024-03-21T12:00:00Z",
+                "lastDonationDate": "2024-03-21",
                 "createdAt": "2024-03-22T12:00:00Z",
                 "updatedAt": "2024-03-22T12:00:00Z"
             }
@@ -310,7 +310,7 @@ Creates a blood donation request using the requester's details extracted from th
                 "userId": "b9964127-2924-42bb-9970-60f93c016bvj",
                 "bio": "I have donated 5 times.",
                 "age": 30,
-                "lastDonationDate": "2024-03-21T12:00:00Z",
+                "lastDonationDate": "2024-03-21",
                 "createdAt": "2024-03-22T12:00:00Z",
                 "updatedAt": "2024-03-22T12:00:00Z"
             }
