@@ -17,7 +17,7 @@
     - **id (String):** A distinctive identifier for each user.
     - **name (String):** The name of the user.
     - **email (String):** The email address of the user.
-    - **password (String):** The hashed password of the user.
+    - **p*assword (St*ring):** The hashed password of the user.
     - **createdAt (DateTime):** The timestamp indicates when the user was created.
     - **updatedAt (DateTime):** The timestamp indicates when the user was last updated.
 
@@ -27,16 +27,14 @@
     - **id (String):** A distinctive identifier for each trip.
     - **userId (String):** A reference to the user who created the trip.
     - **destination (String):** The destination of the trip.
-    - **startDate (Date):** The start date of the trip.
-    - **endDate (Date):** The end date of the trip.
+    - **startDate (String):** The start date of the trip.
+    - **endDate (String):** The end date of the trip.
     - **budget (Number):** The budget for the trip.
     - **activities (String[]):** An array of activities planned for the trip.
-    - **accommodationPreference (String):** The preferred type of accommodation (e.g., hotel, hostel, camping).
-    - **companionshipPreference (String):** The preferred type of companionship (e.g., solo, group).
     - **createdAt (DateTime):** The timestamp indicates when the trip was created.
     - **updatedAt (DateTime):** The timestamp indicates when the trip was last updated.
 
-### **3. Travel Buddy Model:**
+### **3. Travel Buddy Request Model:**
 
 - **Fields:**
     - **id (String):** A distinctive identifier for each travel buddy pairing.
@@ -45,6 +43,16 @@
     - **status (String):** The status of the travel buddy pairing (e.g., PENDING, APPROVED, REJECTED).
     - **createdAt (DateTime):** The timestamp indicates when the travel buddy pairing was created.
     - **updatedAt (DateTime):** The timestamp indicates when the travel buddy pairing was last updated.
+
+### **4. UserProfile Model:**
+
+- **Fields:**
+    - **id (String):** A distinctive identifier for each user profile.
+    - **userId (String):** A reference to the user associated with the profile.
+    - **bio (String):** A brief bio or description of the user.
+    - **age (Integer):** Age of the user.
+    - **createdAt (Date):** The timestamp indicating when the user profile was created.
+    - **updatedAt (Date):** The timestamp indicating when the user profile was last updated.
 
 ## **Error Handling:**
 
@@ -101,20 +109,28 @@ Error Scenarios: `JWT Expiry`, `Invalid JWT`, `Undefined JWT`, `Not Authorized U
 
 **N.B.** For now, no role is required, allowing anyone to perform any operation without restrictions.
 
+**`POST /api/register:`  The request method like GET, PUT, PATCH, DELETE, POST should not be included in the route path. Follow the pattern as shown in the example for every endpoint: `"/api/register"`**
+
 ### **1. User Registration**
 
 - **Endpoint:** **`POST /api/register`**
 - **Request Body:**
+- **Note**: You may need to use transaction for creating user and user profile altogether
 
 ```json
 {
     "name": "John Doe",
     "email": "john@example.com",
-    "password": "password" // password should be stored as a hash
+    "password": "password", // password should be stored as a hash
+    "profile": {
+        "bio": "Passionate about helping people find their lost items.",
+        "age": 30
+		}
 }
 ```
 
 - **Response** (Response should not include the password):
+- Note: In response you don’t need to send the user profile info, just send the user info
 
 ```json
 {
@@ -173,8 +189,6 @@ Error Scenarios: `JWT Expiry`, `Invalid JWT`, `Undefined JWT`, `Not Authorized U
     "endDate": "2024-06-07",
     "budget": 1500,
     "activities": ["Eiffel Tower visit", "Louvre Museum tour"],
-    "accommodationPreference": "Hotel",
-    "companionshipPreference": "Group"
 }
 ```
 
@@ -193,8 +207,6 @@ Error Scenarios: `JWT Expiry`, `Invalid JWT`, `Undefined JWT`, `Not Authorized U
         "endDate": "2024-06-07",
         "budget": 1500,
         "activities": ["Eiffel Tower visit", "Louvre Museum tour"],
-        "accommodationPreference": "Hotel",
-        "companionshipPreference": "Group",
         "createdAt": "2024-03-24T12:00:00Z",
         "updatedAt": "2024-03-24T12:00:00Z"
 		}
@@ -213,11 +225,10 @@ When interacting with the API, you can utilize the following query parameters to
 - `startDate`: (Optional) Filter trips by start date.
 - `endDate`: (Optional) Filter trips by end date.
 - `budget`: (Optional) Filter trips by budget range. Example: ?minBudget=100&maxBudget=10000
-- `companionshipPreference`: (Optional) Filter trips by companionship preference (e.g., solo, group).
-- `searchTerm`: (Optional) Searches for trips based on a keyword or phrase. Only applicable to the following fields: `destination`, `companionshipPreference`, `budget`, etc.
+- `searchTerm`: (Optional) Searches for trips based on a keyword or phrase. Only applicable to the following fields: `destination`, `budget`, etc.
 - `page`: (Optional) Specifies the page number for paginated results. Default is 1. Example: ?page=2
 - `limit`: (Optional) Sets the number of data per page. Default is 10. Example: ?limit=5
-- `sortBy`: (Optional) Specifies the field by which the results should be sorted. Only applicable to the following fields: `destination`, `companionshipPreference`, `budget`. Example: ?sortBy=budget
+- `sortBy`: (Optional) Specifies the field by which the results should be sorted. Only applicable to the following fields: `destination`, `budget`. Example: ?sortBy=budget
 - `sortOrder`: (Optional) Determines the sorting order, either 'asc' (ascending) or 'desc' (descending). Example: ?sortOrder=desc
 - **Response:**
 
@@ -240,8 +251,6 @@ When interacting with the API, you can utilize the following query parameters to
             "endDate": "2024-06-07",
             "budget": 1500,
             "activities": ["Eiffel Tower visit", "Louvre Museum tour"],
-            "accommodationPreference": "Hotel",
-            "companionshipPreference": "Group",
             "createdAt": "2024-03-24T12:00:00Z",
             "updatedAt": "2024-03-24T12:00:00Z"
         },
@@ -250,47 +259,9 @@ When interacting with the API, you can utilize the following query parameters to
 }
 ```
 
-### **5. Update A Trip**
-
-- **Endpoint:** **`PUT /api/trips/:tripId`**
-- **Request Headers:**
-    - **`Authorization: <JWT_TOKEN>`**
-- **Request Body:**
-
-```json
-{
-    "startDate": "2024-08-01",
-    "endDate": "2024-08-07",
-    "budget": 2000
-}
-```
-
-- **Response:**
-
-```json
-{
-    "success": true,
-    "statusCode": 200,
-    "message": "Trip profile updated successfully",
-    "data": {
-        "id": "b9964127-2924-42bb-9970-60f93c016ghi",
-        "userId": "b9964127-2924-42bb-9970-60f93c016bvf",
-        "destination": "Paris, France",
-        "startDate": "2024-08-01",
-        "endDate": "2024-08-07",
-        "budget": 2000,
-        "activities": ["Eiffel Tower visit", "Louvre Museum tour"],
-        "accommodationPreference": "Hotel",
-        "companionshipPreference": "Group",
-        "createdAt": "2024-03-24T12:00:00Z",
-        "updatedAt": "2024-03-24T12:05:00Z"
-    }
-}
-```
-
 ### **6. Send Travel Buddy Request**
 
-- **Endpoint:** **`POST /api/travel-buddies/:tripId/request`**
+- **Endpoint:** **`POST /api/trip/:tripId/request`**
 - **Request Headers:**
     - `Authorization: <JWT_TOKEN>`
 - **Request Body:**
@@ -319,7 +290,7 @@ When interacting with the API, you can utilize the following query parameters to
 }
 ```
 
-### **7. Find Potential Travel Buddies**
+### **7. Get Potential Travel Buddies For a Specific Trip**
 
 - **Endpoint:** **`GET /api/travel-buddies/:tripId`**
 - **Request Headers:**
@@ -338,7 +309,12 @@ When interacting with the API, you can utilize the following query parameters to
             "userId": "b9964127-2924-42bb-9970-60f93c016xyz",
             "status": "PENDING",
             "createdAt": "2024-03-24T12:00:00Z",
-            "updatedAt": "2024-03-24T12:00:00Z"
+            "updatedAt": "2024-03-24T12:00:00Z",
+            "user": {
+	            "name": "John Doe",
+              "email": "john@example.com",
+              // other user fields are optional
+            }
         },
         // More potential travel buddies
     ]
@@ -407,7 +383,7 @@ When interacting with the API, you can utilize the following query parameters to
 
 ```json
 {
-    "name": "John Doe",
+    "name": "John Sina",
     "email": "john.doe@example.com"
 }
 ```
@@ -421,7 +397,7 @@ When interacting with the API, you can utilize the following query parameters to
     "message": "User profile updated successfully",
     "data": {
         "id": "9b0dadf5-10fd-41d1-8355-80e67c85727c",
-        "name": "John Doe",
+        "name": "John Sina",
         "email": "john.doe@example.com",
         "createdAt": "2024-03-24T12:00:00Z",
         "updatedAt": "2024-03-24T12:05:00Z"
