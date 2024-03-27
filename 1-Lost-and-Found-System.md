@@ -18,16 +18,16 @@
     - **name (String):** The name of the user.
     - **email (String):** The email address of the user.
     - **password (String):** The hashed password of the user.
-    - **createdAt (Date):** The timestamp indicating when the user was created.
-    - **updatedAt (Date):** The timestamp indicating when the user was last updated.
+    - **createdAt (DateTime):** The timestamp indicating when the user was created.
+    - **updatedAt (DateTime):** The timestamp indicating when the user was last updated.
 
 ### **2. FoundItemCategory Model:**
 
 - **Fields:**
     - **id (String):** A distinctive identifier for each found item category.
     - **name (String):** The name of the found item category.
-    - **createdAt (Date):** The timestamp indicating when the category was created.
-    - **updatedAt (Date):** The timestamp indicating when the category was last updated.
+    - **createdAt (DateTime):** The timestamp indicating when the category was created.
+    - **updatedAt (DateTime):** The timestamp indicating when the category was last updated.
 
 ### **3. FoundItem Model:**
 
@@ -38,8 +38,8 @@
     - **foundItemName (String):** Name of the found item, ex: **iPhone 15 pro**
     - **description (String):** A description of the found item.
     - **location (String):** The location where the item was found.
-    - **createdAt (Date):** The timestamp indicating when the found item was reported.
-    - **updatedAt (Date):** The timestamp indicating when the found item was last updated.
+    - **createdAt (DateTime):** The timestamp indicating when the found item was reported.
+    - **updatedAt (DateTime):** The timestamp indicating when the found item was last updated.
 
 ### **4. Claim Model:**
 
@@ -49,9 +49,9 @@
     - **foundItemId (String):** A reference to the found item being claimed.
     - **status (String):** The status of the claim (e.g., PENDING, APPROVED, REJECTED) default will be **PENDING** while creating a claim.
     - **distinguishingFeatures (String):** Any distinguishing features provided by the user regarding the claimed item, which can be used to identify the claimant as the owner.
-    - **lostDate (Date):** The timestamp indicating when the item was lost.
-    - **createdAt (Date):** The timestamp indicating when the claim was made.
-    - **updatedAt (Date):** The timestamp indicating when the claim was last updated.
+    - **lostDate (DateTime):** The timestamp indicating when the item was lost.
+    - **createdAt (DateTime):** The timestamp indicating when the claim was made.
+    - **updatedAt (DateTime):** The timestamp indicating when the claim was last updated.
 
 ### **5. UserProfile Model:**
 
@@ -60,8 +60,8 @@
     - **userId (String):** A reference to the user associated with the profile.
     - **bio (String):** A brief bio or description of the user.
     - **age (Integer):** Age of the user.
-    - **createdAt (Date):** The timestamp indicating when the user profile was created.
-    - **updatedAt (Date):** The timestamp indicating when the user profile was last updated.
+    - **createdAt (DateTime):** The timestamp indicating when the user profile was created.
+    - **updatedAt (DateTime):** The timestamp indicating when the user profile was last updated.
 
 ### Relational Description 
 1. **User Model:**
