@@ -13,7 +13,7 @@
 
 ## Github Private Repo (Github ClassRoom):
 
--  For Server(Backed): https://classroom.github.com/a/EfrfvbCd
+-  For Server(Backend): CLASSROOM LINK
 
 ## Assignment Number based on the Last Digit of PH Student ID:
 
