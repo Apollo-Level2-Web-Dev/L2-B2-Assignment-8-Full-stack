@@ -30,7 +30,7 @@
     - **donorId(String):** Id of a user. The user id will be that of a donor. The user you want to request for blood.
     - **requesterId(String):** Id of a user. The user id will be that of a requester. The user who will send requests.
     - **phoneNumber (String):** The phone number of the requester.
-    - **dateOfDonation (Date):** The date of donation
+    - **dateOfDonation (String):** The date of donation
     - **hospitalName(String):** The name of the hospital.
     - **hospitalAddress (String):** The address of the hospital.
     - **reason(String)**: The reason for donation.
@@ -45,7 +45,7 @@
     - **userId (String):** A reference to the user associated with the profile.
     - **bio (String):** A brief bio or description of the user.
     - **age (Integer):** The age of the user.
-    - **lastDonationDate (Date):** The last date of donation
+    - **lastDonationDate (String):** The last date of donation
     - **createdAt (DateTime):** The timestamp indicating when the user profile was created.
     - **updatedAt (DateTime):** The timestamp indicating when the user profile was last updated.
 
