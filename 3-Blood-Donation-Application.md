@@ -19,8 +19,8 @@
     - **bloodType (String):** The type of blood a user has.
     - **location (String):** The location of the user.
     - **availability(Boolean):** The status will be false by default.
-    - **createdAt (Date):** The timestamp indicating when the user was created.
-    - **updatedAt (Date):** The timestamp indicating when the user was last updated.
+    - **createdAt (DateTime):** The timestamp indicating when the user was created.
+    - **updatedAt (DateTime):** The timestamp indicating when the user was last updated.
     
 
 ### **2. Request Model:**
@@ -35,8 +35,8 @@
     - **hospitalAddress (String):** The address of the hospital.
     - **reason(String)**: The reason for donation.
     - **requestStatus (String):** The status will be PENDING by default. **Use enum: `PENDING`, `APPROVED`, `REJECTED`.**
-    - **createdAt (Date):** The timestamp indicating when the found item was reported.
-    - **updatedAt (Date):** The timestamp indicating when the found item was last updated.
+    - **createdAt (DateTime):** The timestamp indicating when the found item was reported.
+    - **updatedAt (DateTime):** The timestamp indicating when the found item was last updated.
 
 ### **3. UserProfile Model:**
 
@@ -46,8 +46,8 @@
     - **bio (String):** A brief bio or description of the user.
     - **age (Integer):** The age of the user.
     - **lastDonationDate (Date):** The last date of donation
-    - **createdAt (Date):** The timestamp indicating when the user profile was created.
-    - **updatedAt (Date):** The timestamp indicating when the user profile was last updated.
+    - **createdAt (DateTime):** The timestamp indicating when the user profile was created.
+    - **updatedAt (DateTime):** The timestamp indicating when the user profile was last updated.
 
 ## Relations Description:
 
