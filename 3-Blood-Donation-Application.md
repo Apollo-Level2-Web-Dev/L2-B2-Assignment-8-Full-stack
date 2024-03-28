@@ -440,9 +440,7 @@ This endpoint retrieves the profile of the authenticated user based on the provi
         "email": "john@example.com",
         "bloodType": "A+",
         "location": "Chittagong",
-        "bio": "I have donated 5 times.",
-        "age": 30,
-        "lastDonationDate": "2023-12-15",
+        "availability": true,
         "createdAt": "2024-03-23T12:00:00Z",
         "updatedAt": "2024-03-24T10:00:00Z",
         "userProfile": {
@@ -472,8 +470,6 @@ This endpoint allows the authenticated user to update their profile information 
 {
     "bio": "Updated bio text. I have donated 5 times.",
     "age": 35,
-    "location": "Chittagong",
-    "lastDonationDate": "2023-12-15"
 }
 ```
 
@@ -487,15 +483,12 @@ This endpoint allows the authenticated user to update their profile information 
     "message": "User profile updated successfully",
     "data": {
         "id": "b9964127-2924-42bb-9970-60f93c016bfr",
-        "name": "John Doe",
-        "email": "john@example.com",
-        "bloodType": "A+",
-        "location": "Chittagong",
-        "bio": "Updated bio text. I have donated 5 times.",
-        "age": 35,
-        "lastDonationDate": "2023-12-15",
-        "createdAt": "2024-03-23T12:00:00Z",
-        "updatedAt": "2024-03-24T10:00:00Z"
+            "userId": "b9964127-2924-42bb-9970-60f93c016bfr",
+            "bio": "Updated bio text. I have donated 5 times.",
+            "age": 35,
+            "lastDonationDate": "2023-12-15",
+            "createdAt": "2024-03-23T12:00:00Z",
+            "updatedAt": "2024-03-24T10:00:00Z"
     }
 }
 ```
