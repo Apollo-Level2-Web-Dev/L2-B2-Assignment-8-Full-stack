@@ -241,7 +241,7 @@ When interacting with the API, you can utilize the following query parameters to
 -  `searchTerm`: (Optional) Searches for pets based on a keyword or phrase. Only applicable to the following fields: `species`, `breed`, `location`, etc.
 -  `page`: (Optional) Specifies the page number for paginated results. Default is 1. Example: ?page=2
 -  `limit`: (Optional) Sets the number of data per page. Default is 10. Example: ?limit=5
--  `sortBy`: (Optional) Specifies the field by which the results should be sorted. Only applicable to the following fields: `species`, `breed`, `size`. Example: ?sortBy=cat
+-  `sortBy`: (Optional) Specifies the field by which the results should be sorted. Only applicable to the following fields: `species`, `breed`, `size`. Example: ?sortBy=species
 -  `sortOrder`: (Optional) Determines the sorting order, either 'asc' (ascending) or 'desc' (descending). Example: ?sortOrder=desc
 -  **Response:**
 
