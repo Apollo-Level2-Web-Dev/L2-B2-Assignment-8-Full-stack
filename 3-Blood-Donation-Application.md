@@ -266,12 +266,10 @@ Creates a blood donation request using the requester's details extracted from th
 ```json
 {
     "donorId": "b9964127-2924-42bb-9970-60f93c016bvj",
-    "name": "Harry Potter",
-    "blood_type": "A+",
-    "phone_number": "012345678591",
-    "date": "2024-03-26",
-    "hospital_name": "Chevron",
-    "hospital_address": "Panchlaish",
+    "phoneNumber": "012345678591",
+    "dateOfDonation": "2024-03-26",
+    "hospitalName": "Chevron",
+    "hospitalAddress": "Panchlaish",
     "reason": "Anemia",
 }
 ```
@@ -286,14 +284,12 @@ Creates a blood donation request using the requester's details extracted from th
     "data": {
         "id": "b9964127-2924-42bb-9970-60f93c016ghi",
         "donorId": "b9964127-2924-42bb-9970-60f93c016bvj",
-        "name": "Harry Potter",
-        "blood_type": "A+",
-        "phone_number": "012345678591",
-        "date": "2024-03-26",
-        "hospital_name": "Chevron",
-        "hospital_address": "Panchlaish",
+        "phoneNumber": "012345678591",
+        "dateOfDonation": "2024-03-26",
+        "hospitalName": "Chevron",
+        "hospitalAddress": "Panchlaish",
         "reason": "Anemia",
-        "request_status": "PENDING",
+        "requestStatus": "PENDING",
         "createdAt": "2024-03-24T12:00:00Z",
         "updatedAt": "2024-03-24T12:00:00Z",
         "donor": {
@@ -354,7 +350,7 @@ Retrieves donation requests directed to the authenticated donor based on the pro
                 "name": "Jane Doe",
                 "email": "jane@example.com",
                 "location":"Chittagong",
-                "blood_type":"A+",
+                "bloodType":"A+",
                 "availability":true
             }
         },
@@ -377,8 +373,6 @@ Retrieves donation requests directed to the authenticated donor based on the pro
                 "location":"Chittagong",
                 "blood_type":"A+",
                 "availability":true
-                
-                
             }
         }
     ]
