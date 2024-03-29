@@ -200,7 +200,7 @@ This endpoint handles user registration, creating both the user account and corr
 }
 ```
 
-### **3. Get Paginated and Filtered Found Items**
+### **3. Get Paginated and Filtered Users (Donors) **
 
 - **Endpoint:** **`GET /api/donor-list`**
 
