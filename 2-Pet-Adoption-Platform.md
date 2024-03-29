@@ -368,7 +368,6 @@ This endpoint allows users with appropriate permissions to update the profile of
          "userId": "b9964127-2924-42bb-9970-60f93c016bvf",
          "petId": "b9964127-2924-42bb-9970-60f93c016ghs",
          "status": "PENDING",
-         "livingSituation": "House with fenced yard",
          "petOwnershipExperience": "Previous owner of a Labrador Retriever",
          "references": "Dr. Smith (veterinarian)",
          "createdAt": "2024-03-24T12:00:00Z",
