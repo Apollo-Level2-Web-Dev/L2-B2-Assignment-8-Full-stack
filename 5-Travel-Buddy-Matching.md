@@ -348,6 +348,7 @@ When interacting with the API, you can utilize the following query parameters to
 
 ```json
 {
+    "tripId": "b9964127-2924-42bb-9970-60f93c016ghi",
     "status": "APPROVED"
 }
 ```
