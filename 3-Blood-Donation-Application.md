@@ -17,6 +17,16 @@
     - **email (String):** The email address of the user.
     - **password (String):** The hashed password of the user.
     - **bloodType (String):** The type of blood a user has.
+          Please use this enum values for bloodType = enum BloodGroup {
+                                                              A_POSITIVE,
+                                                              A_NEGATIVE,
+                                                              B_POSITIVE,
+                                                              B_NEGATIVE,
+                                                              AB_POSITIVE,
+                                                              AB_NEGATIVE,
+                                                              O_POSITIVE,
+                                                              O_NEGATIVE,
+                                                            }
     - **location (String):** The location of the user.
     - **availability(Boolean):** The status will be false by default.
     - **createdAt (DateTime):** The timestamp indicating when the user was created.
@@ -135,7 +145,7 @@ This endpoint handles user registration, creating both the user account and corr
   "name": "John Doe",
   "email": "johndoe@example.com",
   "password": "securepassword",
-  "bloodType": "A+",
+  "bloodType": "A_POSITIVE",
   "location": "New York",
   "age": 30,
   "bio": "A regular blood donor",
@@ -154,7 +164,7 @@ This endpoint handles user registration, creating both the user account and corr
         "id": "b9964127-2924-42bb-9970-60f93c016bvf",
         "name": "John Doe",
         "email": "john@example.com",
-        "bloodType": "A+",
+        "bloodType": "A_POSITIVE",
         "location": "Chittagong",
         "availability": false,
         "createdAt": "2024-03-24T12:00:00Z",
@@ -213,7 +223,7 @@ When interacting with the API, you can utilize the following query parameters to
 - limit: (Optional) Sets the number of items per page. Default is a predefined limit. Example: ?limit=10
 - sortBy: (Optional) Specifies the field by which the results should be sorted. Only applicable to the following fields: `lastDonationDate`, `age`, `name`. Example: ?sortBy=lastDonationDate
 - sortOrder: (Optional) Determines the sorting order, either 'asc' (ascending) or 'desc' (descending). Example: ?sortOrder=desc
-- bloodType: (Optional) Filters results by the blood type of the user you want to request. Example: ?bloodType=A+
+- bloodType: (Optional) Filters results by the blood type of the user you want to request. Example: ?bloodType=A_POSITIVE
 - availability:(Optional) Filters results by the availability of the user you want to request. Example: ?availability=true
 
 - **Response:**
@@ -233,7 +243,7 @@ When interacting with the API, you can utilize the following query parameters to
             "id": "b9964127-2924-42bb-9970-60f93c016ghi",
             "name": "John Doe",
             "email": "john@example.com",
-            "bloodType": "A+",
+            "bloodType": "A_POSITIVE",
             "location": "Chittagong",
             "availability": true,
             "createdAt": "2024-03-24T12:00:00Z",
@@ -296,7 +306,7 @@ Creates a blood donation request using the requester's details extracted from th
             "id": "b9964127-2924-42bb-9970-60f93c016bvj",
             "name": "John Doe",
             "email": "john@gmail.com",
-            "bloodType": "A+",
+            "bloodType": "A_POSITIVE",
             "location": "Chittagong",
             "availability": true,
             "createdAt": "2024-03-24T12:00:00Z",
@@ -350,7 +360,7 @@ Retrieves donation requests directed to the authenticated donor based on the pro
                 "name": "Jane Doe",
                 "email": "jane@example.com",
                 "location":"Chittagong",
-                "bloodType":"A+",
+                "bloodType":"A_POSITIVE",
                 "availability":true
             }
         },
@@ -438,7 +448,7 @@ This endpoint retrieves the profile of the authenticated user based on the provi
         "id": "b9964127-2924-42bb-9970-60f93c016bfr",
         "name": "John Doe",
         "email": "john@example.com",
-        "bloodType": "A+",
+        "bloodType": "A_POSITIVE",
         "location": "Chittagong",
         "availability": true,
         "createdAt": "2024-03-23T12:00:00Z",
